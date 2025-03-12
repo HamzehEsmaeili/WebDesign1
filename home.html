@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=download,thumb_up"
-    />
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -21,239 +13,100 @@
     />
     <style>
       * {
-        margin: 0;
         padding: 0;
+        margin: 0;
         box-sizing: border-box;
+        font-family: tahoma;
       }
-      body {
+      label {
+        color: #ede8dc;
+      }
+      .form-container {
+        display: flex;
+        flex-direction: column;
         padding: 20px;
-      }
-      p {
-        font-size: 40px;
-      }
-      /* Buttons */
-      .btn {
-        padding: 10px 25px;
-        margin: 10px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      .btn1 {
-        background: #00ffff;
-        color: #ff0000;
-      }
-      .btn1:hover {
-        background: #ffffff;
-        border: 2px solid #00ffff;
-      }
-      .btn2 {
-        background: rgba(255, 0, 0, 0.5);
-        color: #0000ff;
-      }
-      .btn2:hover {
-        background: #e43d3d;
-      }
-      .btn3 {
-        background: #007bff;
-        color: #ffffff;
-      }
-      .btn3:hover {
-        background: #0056b3;
-      }
-      .btn4 {
-        background: #28a745;
-        color: #ffffff;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      }
-      .btn4:hover {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-      }
-      .btn5 {
-        background: none;
-        color: #e42f02;
-        border: 2px solid #f83a00;
-      }
-      .btn5:hover {
-        background: #ff9100;
-        color: #ffffff;
+        gap: 15px;
+        width: 300px;
+        margin: 20px auto;
+        background: #205781;
+        border-radius: 20px;
       }
 
-      .button {
-        padding: 35px 35px;
-        margin: 20px;
+      .input-group {
+        position: relative;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
         font-size: 16px;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s;
       }
 
-      .btn-save {
-        background-color: #28a745;
-      }
-      .btn-save:hover {
-        background-color: #218838;
-      }
+      .input-group i {
+        position: absolute;
+        right: 10px;
+        top: 50%;
 
-      .btn-delete {
-        background-color: #dc3545;
+        color: gray;
       }
-      .btn-delete:hover {
-        background-color: #c8233388;
-      }
-
-      .btn-edit {
-        background-color: #26609e;
-      }
-      .btn-edit:hover {
-        background-color: #0069d9;
-      }
-
-      .btn-search {
-        background-color: #17a2b8;
-      }
-      .btn-search:hover {
-        background-color: #138496;
-      }
-
-      .btn-download {
-        background-color: #2fe256;
-      }
-      .btn-download:hover {
-        background-color: #36fc67;
-      }
-
-      .alertbox {
-        margin: 10px;
-        padding: 10px;
-        width: 300px;
-        border-radius: 5px;
-      }
-      .alert1 {
-        border-left: 10px solid #ff0000;
-        background: #ff6347;
-      }
-      .alert2 {
-        border-left: 10px solid #2b96d4;
-        background: #90ee90;
-      }
-      .alert3 {
-        border-left: 10px solid #c120cf;
-        background: #ffd900;
-      }
-      .alert4 {
-        border-left: 10px solid #5a2c96;
-        background: #fa14c0;
-      }
-      .alert5 {
-        border-left: 10px solid #c120cf;
-        background: #16f3bc;
-      }
-
-      /* Icons */
-      i,
-      .material-symbols-outlined {
+      div.markerup {
         font-size: 60px;
-        padding: 20px;
-      }
-      /* input */
-      .input-box {
-        padding: 20px;
-        width: 300px;
-      }
-      .input1 {
-        border: 2px solid tomato;
-        border-radius: 4px;
-        padding: 8px;
-        transition: 0.5s;
-      }
-
-      .input1:hover {
-        background-color: rgba(241, 108, 31, 0.479);
-      }
-      .input2 {
-        border: none;
-        border-bottom: 2px solid #3498db;
-        padding: 8px;
-      }
-      .input3 {
-        border: 2px dashed #27ae60;
-        border-radius: 10px;
-        padding: 8px;
-      }
-      .input4 {
-        border: 2px solid #f1c40f;
-        border-radius: 50px;
-        padding: 10px;
-      }
-      .input5 {
-        border: none;
-        padding: 8px;
-        border-left: 8px solid rgb(223, 20, 20);
-        background-color: rgb(12, 164, 235);
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        text-decoration: none;
       }
     </style>
   </head>
-  <body>
-    <p>Buttons</p>
+  <body id="markerup">
+    <form class="form-container" method="post">
+      <div class="input-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Name" />
+        <i class="fa-solid fa-user"></i>
+      </div>
 
-    <button class="btn btn1">Click Me</button>
-    <button class="btn btn2">Click Me</button>
-    <button class="btn btn3">Click Me</button>
-    <button class="btn btn4">Click Me</button>
-    <button class="btn btn5">Click Me</button>
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Email"
+        />
+        <i class="fa-solid fa-envelope"></i>
+      </div>
 
-    <p>Buttons</p>
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          placeholder="Password"
+        />
+        <i class="fa-solid fa-lock"></i>
+      </div>
 
-    <a href="#" class="button btn-save"><i class="fas fa-save"></i> Save</a>
-    <a href="#" class="button btn-delete"
-      ><i class="fas fa-trash"></i> Remove
-    </a>
-    <a href="#" class="button btn-edit"><i class="fas fa-edit"></i> Edit</a>
-    <a href="#" class="button btn-search"
-      ><i class="fas fa-search"></i> Search</a
-    >
-    <a href="#" class="button btn-download"
-      ><i class="fas fa-download"></i> Download</a
-    >
+      <div class="input-group">
+        <label for="tel">Tel:</label>
+        <input type="tel" id="tel" name="tel" required placeholder="Tel" />
+        <i class="fa-solid fa-phone"></i>
+      </div>
 
-    <p>Alert Box</p>
-    <div class="alertbox alert1">This is an alert box</div>
-    <div class="alertbox alert2">This is an alert box</div>
-    <div class="alertbox alert3">This is an alert box</div>
-    <div class="alertbox alert4">This is an alert box</div>
-    <div class="alertbox alert5">This is an alert box</div>
-
-    <p>Bootstrap Icons</p>
-    <i class="bi bi-telegram" style="color: #0099ff"></i>
-    <i class="bi bi-youtube" style="color: #ff0000"></i>
-    <i class="bi bi-spotify" style="color: #08fd00"></i>
-
-    <p>Google Icons</p>
-    <span class="material-symbols-outlined">download</span>
-    <span class="material-symbols-outlined">thumb_up</span>
-
-    <p>Font awesome Icons</p>
-    <i class="fa-solid fa-trash"></i>
-    <i class="fa-solid fa-gamepad fa-spin"></i>
-
-    <p>Inputs</p>
-    <div class="input-box">
-      <input type="text" class="input1" placeholder="name" />
+      <input type="submit" value="Register" />
+    </form>
+    <div class="markerup">
+      <a href="#markerup">
+        <i class="fa-solid fa-circle-up"></i>
+      </a>
     </div>
-    <div class="input-box">
-      <input type="email" class="input2" placeholder="email" />
-    </div>
-    <div class="input-box">
-      <input type="password" class="input3" placeholder="password" />
-    </div>
-    <div class="input-box">
-      <input type="tel" class="input4" placeholder="phone number " />
-    </div>
-    <div class="input-box">
-      <input type="text" class="input5" placeholder="text" />
+    <div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   </body>
 </html>
