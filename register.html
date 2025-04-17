@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .mobile {
+        max-width: 375px;
+        max-height: 734px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 44px;
+        overflow-y: auto;
+      }
+      .register {
+        color: #181818;
+        font-family: "Poppins";
+        font-size: 18px;
+        margin-bottom: 40px;
+        margin-top: 25px;
+        margin-left: 16px;
+      }
+      .form-container {
+        padding: 16px;
+        display: flex;
+        gap: 33px;
+      }
+      .form-container input {
+        padding: 16px;
+        display: flex;
+        width: 155px;
+        height: 54px;
+        border: solid 1px #e0e0e0;
+        background-color: #f2f2f2;
+        border-radius: 4px;
+      }
+      .personal-information {
+        padding: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+      }
+      .personal-information input {
+        padding: 16px;
+        width: 100%;
+        border: solid 1px #e0e0e0;
+        background-color: #f2f2f2;
+        border-radius: 4px;
+      }
+      .register-button {
+        background: #453884;
+        color: white;
+        width: 343px;
+        padding: 20px;
+        border-radius: 4px;
+        border-style: none;
+        justify-content: center;
+        display: flex;
+        margin: auto;
+        gap: 40px;
+        margin-top: 40px;
+      }
+      .login {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        color: #4f4f4f;
+        margin-bottom: 19px;
+      }
+
+      .login a {
+        text-decoration: none;
+        color: #453884;
+        font-family: arial;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mobile">
+      <div class="register">Register Your Account</div>
+      <form class="form-container" action="">
+        <input type="text" name="fname" id="fname" placeholder="First Name" />
+        <input type="text" name="fname" id="lname" placeholder="Last Name" />
+      </form>
+      <form class="personal-information" action="">
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Confirm Password"
+        />
+        <input type="tel" name="tel" id="tel" placeholder="Phone" />
+        <input
+          type="text"
+          name="location"
+          id="location"
+          placeholder="Location"
+        />
+      </form>
+      <input type="submit" class="register-button" value="Register" />
+      <div class="login">You have an account? <a href="#">Login</a></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Roboto;
+      }
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: grey;
+        letter-spacing: 5px;
+      }
+      .logo__name {
+        letter-spacing: 20px;
+      }
+      .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .menu a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .icons {
+        display: flex;
+        gap: 20px;
+      }
+      .icons img {
+        width: 20px;
+        height: 20px;
+      }
+      .car {
+        width: 100%;
+        height: 100vh;
+        background-image: url("Assets/Images/Homepage-Model-Y-2-Hero-Desktop-APAC-LHD.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      .car-2 {
+        width: 100%;
+        height: 100vh;
+        background-image: url("Assets/Images/Homepage-Model-3-Desktop-US.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      .car__description {
+        text-align: center;
+        color: white;
+        padding-top: 150px;
+      }
+      .car__description h2 {
+        font-size: 64px;
+        margin-bottom: 5px;
+        font-weight: 800;
+      }
+      .car__description p {
+        font-size: 36px;
+      }
+      .button-container {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .button-container .order {
+        padding: 10px;
+        width: 15%;
+        background-color: #3e6ae1;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .button-container .learn {
+        padding: 15px;
+        width: 15%;
+        background-color: white;
+        border-radius: 10px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="logo">
+        <span class="logo__name">TESLA</span>
+      </div>
+      <div class="menu">
+        <a href="#">Vehicles</a>
+        <a href="#">Energy</a>
+        <a href="#">Charging</a>
+        <a href="#">Discover</a>
+        <a href="#">Shop</a>
+      </div>
+      <div class="icons">
+        <p>🌐</p>
+        <p>🌐</p>
+        <p>🌐</p>
+      </div>
+    </nav>
+    <!-- car1 -->
+    <div class="car">
+      <div class="car__description">
+        <h2>Model Y</h2>
+        <p>Starting at $41,4901</p>
+      </div>
+      <div class="button-container">
+        <button class="order">Order Now</button>
+        <button class="learn">Learn More</button>
+      </div>
+    </div>
+    <!-- car2 -->
+    <div class="car-2">
+      <div class="car__description">
+        <h2>Model 3</h2>
+        <p>$299/mo Leasing With $1,000 Down</p>
+      </div>
+      <div class="button-container">
+        <button class="order">Order Now</button>
+        <button class="learn">Learn More</button>
+      </div>
+    </div>
+  </body>
+</html>

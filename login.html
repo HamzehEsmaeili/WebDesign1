@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat";
+        background-color: #f0f0f0;
+      }
+      .mobile {
+        max-width: 375px;
+        max-height: 734px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 44px;
+        overflow-y: auto;
+        background-color: #fff;
+      }
+      .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo img {
+        width: 58px;
+        height: 50px;
+      }
+
+      .logo h1 {
+        font-size: 14px;
+        font-weight: bold;
+        color: #000;
+      }
+      .login-container {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 54px;
+      }
+
+      .login-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+      }
+
+      .input-field {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: #f2f2f2;
+        font-family: "Poppins";
+      }
+
+      .forgot-password {
+        line-height: 15px;
+        text-align: right;
+        font-size: 14px;
+        color: #666;
+        text-decoration: none;
+        margin-top: -20px;
+      }
+
+      .forgot-password:hover {
+        text-decoration: underline;
+      }
+
+      .login-btn {
+        width: 343px;
+        padding: 19px;
+        background-color: #6b4e9b;
+        color: #fdfdfd;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      .login-btn:hover {
+        background-color: #5a3e8a;
+      }
+
+      .register-text {
+        font-size: 14px;
+        color: #666;
+        margin-top: 40px;
+        text-align: left;
+        margin-bottom: 84px;
+      }
+
+      .register-link {
+        color: #6b4e9b;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .register-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mobile">
+      <div class="login-container">
+        <div class="logo">
+          <img src="Assets/Images/Logo.png" alt="Carodeal Logo" />
+          <h1>Carodeal</h1>
+        </div>
+        <form class="login-form">
+          <input type="text" placeholder="Username" class="input-field" />
+          <input type="password" placeholder="Password" class="input-field" />
+          <a href="#" class="forgot-password">Forgot Password?</a>
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+        <p class="register-text">
+          Don't have an account? <a href="#" class="register-link">Register</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

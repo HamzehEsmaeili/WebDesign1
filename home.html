@@ -3,110 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <style>
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        font-family: tahoma;
       }
-      label {
-        color: #ede8dc;
+      .mobile {
+        max-width: 375px;
+        max-height: 1445px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 44px;
+        overflow-y: auto;
+        background-color: #fff;
       }
-      .form-container {
+      .location {
         display: flex;
-        flex-direction: column;
-        padding: 20px;
-        gap: 15px;
-        width: 300px;
-        margin: 20px auto;
-        background: #205781;
-        border-radius: 20px;
+        padding: 15px 16px;
+        align-items: center;
       }
-
-      .input-group {
-        position: relative;
+      .notification {
+        margin-left: auto;
       }
-
-      .input-group input {
-        width: 100%;
-        padding: 10px 40px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+      .search-car {
+        border: 2px solid #e0e0e0;
+        background-color: #f2f2f2;
+        border-radius: 4px;
+        margin: 16px;
+        padding: 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .search-car__icon-search {
+        width: 24px;
+        height: 24px;
+      }
+      .img-car {
+        margin: 16px;
+        width: 341px;
+        height: 160px;
+      }
+      .slider {
+        width: 341px;
+        height: 15px;
+        margin-left: 16px;
+      }
+      .last-search-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+      }
+      .last-search-container__your-last-search {
+        font-family: "Poppins";
         font-size: 16px;
       }
-
-      .input-group i {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-
-        color: gray;
-      }
-      div.markerup {
-        font-size: 60px;
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
+      .last-search-container__see-all {
+        font-family: "Poppins";
+        font-size: 12px;
+        color: blue;
         text-decoration: none;
+      }
+      .last-detail-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .last-detail-container-box {
+        width: 48%;
+        padding: 10px;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .last-detail-container__img {
+        width: 100%;
+      }
+
+      .last-detail-container__detail {
+        font-size: 12px;
+        font-family: "Poppins";
+      }
+
+      .last-detail-container__price {
+        font-size: 14px;
+        font-weight: bold;
+        color: #453884;
       }
     </style>
   </head>
-  <body id="markerup">
-    <form class="form-container" method="post">
-      <div class="input-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Name" />
-        <i class="fa-solid fa-user"></i>
-      </div>
-
-      <div class="input-group">
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          placeholder="Email"
+  <body>
+    <div class="mobile">
+      <div class="location">
+        <img src="Assets/Images/entypo_location-pin.png" alt="location" />
+        <p>Texas, US</p>
+        <img
+          class="notification"
+          src="Assets/Images/clarity_notification-solid-badged.png"
+          alt="notification"
         />
-        <i class="fa-solid fa-envelope"></i>
       </div>
-
-      <div class="input-group">
-        <label for="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-          placeholder="Password"
+      <div class="search-car">
+        <img
+          class="search-car__icon-search"
+          src="Assets/Images/gg_search.png"
+          alt="icon-search"
         />
-        <i class="fa-solid fa-lock"></i>
+        <p class="search-car__find-car">Find your dream vehicle with us</p>
       </div>
-
-      <div class="input-group">
-        <label for="tel">Tel:</label>
-        <input type="tel" id="tel" name="tel" required placeholder="Tel" />
-        <i class="fa-solid fa-phone"></i>
+      <img class="img-car" src="Assets/Images/Mask Group.png" alt="" />
+      <img class="slider" src="Assets/Images/Group 7.png" alt="" />
+      <div class="last-search-container">
+        <p class="last-search-container__your-last-search">Your last search</p>
+        <a class="last-search-container__see-all" href="#">See all</a>
       </div>
-
-      <input type="submit" value="Register" />
-    </form>
-    <div class="markerup">
-      <a href="#markerup">
-        <i class="fa-solid fa-circle-up"></i>
-      </a>
-    </div>
-    <div>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="last-detail-container">
+        <div class="last-detail-container-box">
+          <img
+            src="Assets/Images/last-search-img.png"
+            alt=""
+            class="last-detail-container__img"
+          />
+          <p class="last-detail-container__detail">
+            Veroka - Indlander Lux 1.8L MPV 7 Seater
+          </p>
+          <p class="last-detail-container__price">$70.000</p>
+        </div>
+        <div class="last-detail-container-box">
+          <img
+            src="Assets/Images/last-search-img.png"
+            alt=""
+            class="last-detail-container__img"
+          />
+          <p class="last-detail-container__detail">
+            Veroka - Indlander Lux 1.8L MPV 7 Seater
+          </p>
+          <p class="last-detail-container__price">$70.000</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
